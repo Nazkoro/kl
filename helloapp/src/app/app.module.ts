@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {Routes, RouterModule} from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import { HttpClientModule }   from '@angular/common/http';
+import { HttpService }   from './http.service';
 
 import { todoListModule }   from './components/todo/todoList/todoList.module';
 import { todoItemModule }   from './components/todo/todoitem/toItem.module';
@@ -18,7 +19,7 @@ const appRoutes: Routes =[
 
 @NgModule({
     imports:      [ BrowserModule, HttpClientModule, FormsModule, todoListModule, todoItemModule, RouterModule.forRoot(appRoutes) ],
-    declarations: [ AppComponent ,TodoComponent, NotFoundComponent],
+    declarations: [ AppComponent ,TodoComponent,NotFoundComponent],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
