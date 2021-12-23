@@ -40,7 +40,7 @@ const getPosts = (req, res) => {
 
 
 const addPost = (req, res) => {
-  console.log(req.body)
+  console.log(req)
   const { title, author, text } = req.body;
   const post = new Post({ title, author, text });
   post
